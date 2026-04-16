@@ -1,6 +1,10 @@
 const readline = require ('readline-sync')
 
-console.log ('-------- DESEMPENHO DOS FUNCIONÁRIOS ----------')
+console.log ('  ')
+console.log ('_________________________________________________')
+console.log ('  ')
+console.log ('|          DESEMPENHO DOS FUNCIONÁRIOS          |')
+console.log ('_________________________________________________')
 console.log ('  ')
 
 let nomeFuncionario = readline.question ('Informe o nome do funcionário: ')
@@ -8,7 +12,11 @@ let cargoOcupado = readline.question ('Cargo que o funcionário ocupa: ')
 let salarioBase = readline.questionFloat ('Qual o salário base do funcionário: ')
 let resultadoAlcancado = readline.questionFloat('Resultado alcancado: ')
 
-console.log ('-------- Meta Mensal ---------')
+console.log ('  ')
+console.log ('_______________________')
+console.log ('  ')
+console.log ('|     META MENSAL     |')
+console.log ('_______________________')
 console.log ('  ')
 
 let metaMensal = 10000
@@ -24,28 +32,54 @@ if(metaMensal <= resultadoAlcancado){
     console.log(`Vocẽ alcançou ${percentual}% da meta e faltou ${Math.abs(diferenca)}%`)
 }
 console.log ('  ')
-
-console.log ('------ DESEMPENHO -------')
+console.log ('______________________')
+console.log ('  ')
+console.log ('|     DESEMPENHO     |')
+console.log ('______________________')
 console.log ('  ')
  
 if (percentual < 70){
     console.log ('Insuficiente')
+    console.log ('sem bônus')
+    
 }else if(percentual < 100){
     console.log('Satisfatório')
-}else{
-    console.log('Excelente')
-}
-console.log ('  ')
-
-console.log('------- BÔNUS -------')
-console.log ('  ')
-
-if(percentual < 70){
-    console.log ('sem bônus')
-
-}else if(percentual < 100){
+    console.log ('  ')
+    console.log ('______________________')
+       console.log ('  ')
+    console.log ('|        BÔNUS       |')
+    console.log ('______________________')
+    console.log ('  ')
     console.log('Bônus de 5% sobre o salário base')
 
-}else
-    console.log('Bônus de 10% sobre o salário base')
+}else{
+    console.log('Excelente')
     console.log ('  ')
+    console.log ('______________________')
+       console.log ('  ')
+    console.log ('|        BÔNUS       |')
+    console.log ('______________________')
+    console.log ('  ')
+    console.log('Bônus de 10% sobre o salário base')
+}
+    console.log ('  ')
+    console.log('______________________________________________')
+    console.log ('  ')
+    console.log('|          RELATÓRIO DO FUNCIONÁRIO          |')
+    console.log('______________________________________________')
+    console.log ('  ')
+
+    console.log ('NOME: ')
+    console.log (nomeFuncionario)
+
+    console.log ('  ')
+
+    console.log('CARGO: ')
+    console.log(cargoOcupado)
+
+    console.log ('  ')
+    console.log('SALÁRIO BASE: ')
+
+    console.log ('  ')
+    console.log('META ALCANÇADA: ')
+    console.log(resultadoAlcancado)
